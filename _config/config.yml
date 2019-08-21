@@ -1,0 +1,19 @@
+---
+Name: fromholdio-superlink-megamenus
+After: 'elemental-list'
+---
+
+Fromholdio\SuperLinkerMenus\Model\MenuItem:
+  extensions:
+    - Fromholdio\ElementalMultiArea\Extensions\MultiElementalAreasExtension
+    - Fromholdio\SuperLinkerMegaMenus\Extensions\MegaMenuItemExtension
+  submenu_mode_options:
+    mega: 'Build a mega-menu'
+  elemental_relations:
+    SubmenuArea:
+      tab_path: false
+      elemental_base_class: DNADesign\Elemental\Models\BaseElement
+
+DNADesign\Elemental\Models\BaseElement:
+  extensions:
+    - Fromholdio\SuperLinkerMegaMenus\Extensions\BaseElementCMSEditLinkExtension
