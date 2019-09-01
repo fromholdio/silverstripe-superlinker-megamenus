@@ -24,6 +24,12 @@ class MegaMenuItemExtension extends DataExtension
         'SubmenuArea'
     ];
 
+    public function getMegaMenu()
+    {
+        return $this->getOwner()->SubmenuArea()
+            ->renderWith([ElementalArea::class . '_MegaMenu', ElementalArea::class]);
+    }
+
     public function updateMenuItemCMSFields(FieldList &$fields)
     {
         $types = $this->getOwner()->getElementalTypes('SubmenuArea');
