@@ -19,11 +19,14 @@ class BaseElementCMSEditLinkExtension extends Extension
             return;
         }
 
-        if ($page instanceof MenuItem && $relationName === 'SubmenuArea') {
+        if (is_a($page, MenuItem::class) && $relationName === 'SubmenuArea') {
+            $link = $page->CMSEditLink();
+            $link = preg_replace('/\/item\/([\d]+)\/edit/', '/item/$1', $link);
             $link = Controller::join_links(
-                $page->CMSEditLink(),
-                'ItemEditForm/field/SubmenuArea/item/',
-                $owner->ID
+                $link,
+                'ItemEditForm/field/SubmenuArea/item',
+                $owner->ID,
+                'edit'
             );
         }
     }
