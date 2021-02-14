@@ -42,7 +42,7 @@ class ElementMegaMenuColumn extends ElementGroup
             $widthOptions
         );
         $widthField->setDescription('How many columns of the mega menu should this span?');
-        $fields->insertBefore('ElementalArea', $widthField);
+        $fields->insertBefore('Elements', $widthField);
 
         return $fields;
     }
