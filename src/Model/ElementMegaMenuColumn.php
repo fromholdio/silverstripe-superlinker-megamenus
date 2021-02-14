@@ -62,4 +62,16 @@ class ElementMegaMenuColumn extends ElementGroup
         $this->extend('updateMaxWidth', $max);
         return $max;
     }
+
+    public function getSummary()
+    {
+        return 'Column Width: ' . $this->Width;
+    }
+
+    protected function provideBlockSchema()
+    {
+        $blockSchema = parent::provideBlockSchema();
+        $blockSchema['content'] = $this->getSummary();
+        return $blockSchema;
+    }
 }
