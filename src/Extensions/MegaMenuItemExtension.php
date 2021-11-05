@@ -24,6 +24,10 @@ class MegaMenuItemExtension extends DataExtension
         'SubmenuArea'
     ];
 
+    private static $cascade_duplicates = [
+        'SubmenuArea'
+    ];
+
     public function getMegaMenu()
     {
         return $this->getOwner()->SubmenuArea()
