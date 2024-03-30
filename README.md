@@ -4,7 +4,7 @@ A SilverStripe module providing a menu system including Mega Menu submenus, buil
 
 ## Requirements
 
-* [silverstripe-framework](https://github.com/silverstripe/silverstripe-framework) ^4
+* [silverstripe-framework](https://github.com/silverstripe/silverstripe-framework) ^5
 
 ## Installation
 
