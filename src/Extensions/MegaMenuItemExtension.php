@@ -50,7 +50,7 @@ class MegaMenuItemExtension extends DataExtension
         $submenuAreaWrapper->displayIf('SubmenuMode')->isEqualTo(self::SUBMENU_MEGA);
 
         $fields->addFieldToTab(
-            'Root.Main.SuperLinkTargetTab',
+            'Root.Submenu',
             $submenuAreaWrapper
         );
     }
